@@ -1,1 +1,143 @@
-# java-IDCHECKIO
+# swagger-java-client
+
+## Requirements
+
+Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+
+## Installation
+
+To install the API client library to your local Maven repository, simply execute:
+
+```shell
+mvn install
+```
+
+To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
+
+```shell
+mvn deploy
+```
+
+Refer to the [official documentation](https://maven.apache.org/plugins/maven-deploy-plugin/usage.html) for more information.
+
+### Maven users
+
+Add this dependency to your project's POM:
+
+```xml
+<dependency>
+    <groupId>io.swagger</groupId>
+    <artifactId>swagger-java-client</artifactId>
+    <version>1.0.0</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+### Gradle users
+
+Add this dependency to your project's build file:
+
+```groovy
+compile "io.swagger:swagger-java-client:1.0.0"
+```
+
+### Others
+
+At first generate the JAR by executing:
+
+    mvn package
+
+Then manually install the following JARs:
+
+* target/swagger-java-client-1.0.0.jar
+* target/lib/*.jar
+
+## Getting Started
+
+Please follow the [installation](#installation) instruction and execute the following Java code:
+
+```java
+
+import com.*;
+import com.auth.*;
+import com.model.*;
+import com.idcheckio.AdministrationApi;
+
+import java.io.File;
+import java.util.*;
+
+public class AdministrationApiExample {
+
+    public static void main(String[] args) {
+        
+        AdministrationApi apiInstance = new AdministrationApi();
+        try {
+            HealthResponse result = apiInstance.getHealth();
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling AdministrationApi#getHealth");
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *http://localhost/rest*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*AdministrationApi* | [**getHealth**](docs/AdministrationApi.md#getHealth) | **GET** /v0/admin/health | HTTP GET health
+*AdministrationApi* | [**getUser**](docs/AdministrationApi.md#getUser) | **GET** /v0/admin/user | HTTP GET user
+*AnalysisApi* | [**getReport**](docs/AnalysisApi.md#getReport) | **GET** /v0/pdfreport/{analysisRefUid} | HTTP GET report (demo)
+*AnalysisApi* | [**getResult**](docs/AnalysisApi.md#getResult) | **GET** /v0/result/{analysisRefUid} | HTTP GET result
+*AnalysisApi* | [**getTask**](docs/AnalysisApi.md#getTask) | **GET** /v0/task/{analysisRefUid} | HTTP GET task
+*AnalysisApi* | [**postImage**](docs/AnalysisApi.md#postImage) | **POST** /v0/task/image | HTTP POST task image
+*AnalysisApi* | [**postMrz**](docs/AnalysisApi.md#postMrz) | **POST** /v0/task/mrz | HTTP POST task mrz
+*SandboxApi* | [**getImage**](docs/SandboxApi.md#getImage) | **GET** /v0/sandbox/image/{imageUid} | HTTP GET image
+*SandboxApi* | [**getImageList**](docs/SandboxApi.md#getImageList) | **GET** /v0/sandbox/imagelist | HTTP GET images list
+*SandboxApi* | [**getMrz**](docs/SandboxApi.md#getMrz) | **GET** /v0/sandbox/mrz/{mrzUid} | HTTP GET mrz
+*SandboxApi* | [**getMrzList**](docs/SandboxApi.md#getMrzList) | **GET** /v0/sandbox/mrzlist | HTTP GET mrz list
+
+
+## Documentation for Models
+
+ - [AnalysisDate](docs/AnalysisDate.md)
+ - [CheckReportSummary](docs/CheckReportSummary.md)
+ - [Control](docs/Control.md)
+ - [ControlGroup](docs/ControlGroup.md)
+ - [DocumentDetail](docs/DocumentDetail.md)
+ - [ErrorResponse](docs/ErrorResponse.md)
+ - [ExtractedImage](docs/ExtractedImage.md)
+ - [GenericData](docs/GenericData.md)
+ - [HealthResponse](docs/HealthResponse.md)
+ - [HolderDetail](docs/HolderDetail.md)
+ - [IdDocumentClassification](docs/IdDocumentClassification.md)
+ - [Image](docs/Image.md)
+ - [ImageListResponse](docs/ImageListResponse.md)
+ - [ImageRequest](docs/ImageRequest.md)
+ - [Mrz](docs/Mrz.md)
+ - [MrzListResponse](docs/MrzListResponse.md)
+ - [MrzRequest](docs/MrzRequest.md)
+ - [MrzResponse](docs/MrzResponse.md)
+ - [ReportResponse](docs/ReportResponse.md)
+ - [ResultResponse](docs/ResultResponse.md)
+ - [TaskResponse](docs/TaskResponse.md)
+ - [UserResponse](docs/UserResponse.md)
+
+
+## Documentation for Authorization
+
+All endpoints do not require authorization.
+Authentication schemes defined for the API:
+
+## Recommendation
+
+It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
+
+## Author
+
+
+
