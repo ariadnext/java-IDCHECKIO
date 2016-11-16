@@ -26,13 +26,157 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Control;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * ControlGroup
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class ControlGroup   {
+  @SerializedName("identifier")
+  private String identifier = null;
+
+  @SerializedName("titleMsg")
+  private String titleMsg = null;
+
+  @SerializedName("resultMsg")
+  private String resultMsg = null;
+
+  /**
+   * result
+   */
+  public enum ResultEnum {
+    @SerializedName("NONE")
+    NONE("NONE"),
+    
+    @SerializedName("OK")
+    OK("OK"),
+    
+    @SerializedName("WARNING")
+    WARNING("WARNING"),
+    
+    @SerializedName("ERROR")
+    ERROR("ERROR");
+
+    private String value;
+
+    ResultEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("result")
+  private ResultEnum result = null;
+
+  @SerializedName("control")
+  private List<Control> control = new ArrayList<Control>();
+
+  public ControlGroup identifier(String identifier) {
+    this.identifier = identifier;
+    return this;
+  }
+
+   /**
+   * control group identifier
+   * @return identifier
+  **/
+  @ApiModelProperty(example = "null", value = "control group identifier")
+  public String getIdentifier() {
+    return identifier;
+  }
+
+  public void setIdentifier(String identifier) {
+    this.identifier = identifier;
+  }
+
+  public ControlGroup titleMsg(String titleMsg) {
+    this.titleMsg = titleMsg;
+    return this;
+  }
+
+   /**
+   * title message
+   * @return titleMsg
+  **/
+  @ApiModelProperty(example = "null", value = "title message")
+  public String getTitleMsg() {
+    return titleMsg;
+  }
+
+  public void setTitleMsg(String titleMsg) {
+    this.titleMsg = titleMsg;
+  }
+
+  public ControlGroup resultMsg(String resultMsg) {
+    this.resultMsg = resultMsg;
+    return this;
+  }
+
+   /**
+   * result message
+   * @return resultMsg
+  **/
+  @ApiModelProperty(example = "null", value = "result message")
+  public String getResultMsg() {
+    return resultMsg;
+  }
+
+  public void setResultMsg(String resultMsg) {
+    this.resultMsg = resultMsg;
+  }
+
+  public ControlGroup result(ResultEnum result) {
+    this.result = result;
+    return this;
+  }
+
+   /**
+   * result
+   * @return result
+  **/
+  @ApiModelProperty(example = "null", value = "result")
+  public ResultEnum getResult() {
+    return result;
+  }
+
+  public void setResult(ResultEnum result) {
+    this.result = result;
+  }
+
+  public ControlGroup control(List<Control> control) {
+    this.control = control;
+    return this;
+  }
+
+  public ControlGroup addControlItem(Control controlItem) {
+    this.control.add(controlItem);
+    return this;
+  }
+
+   /**
+   * control list
+   * @return control
+  **/
+  @ApiModelProperty(example = "null", value = "control list")
+  public List<Control> getControl() {
+    return control;
+  }
+
+  public void setControl(List<Control> control) {
+    this.control = control;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +186,17 @@ public class ControlGroup   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ControlGroup controlGroup = (ControlGroup) o;
+    return Objects.equals(this.identifier, controlGroup.identifier) &&
+        Objects.equals(this.titleMsg, controlGroup.titleMsg) &&
+        Objects.equals(this.resultMsg, controlGroup.resultMsg) &&
+        Objects.equals(this.result, controlGroup.result) &&
+        Objects.equals(this.control, controlGroup.control);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(identifier, titleMsg, resultMsg, result, control);
   }
 
   @Override
@@ -55,6 +204,11 @@ public class ControlGroup   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ControlGroup {\n");
     
+    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+    sb.append("    titleMsg: ").append(toIndentedString(titleMsg)).append("\n");
+    sb.append("    resultMsg: ").append(toIndentedString(resultMsg)).append("\n");
+    sb.append("    result: ").append(toIndentedString(result)).append("\n");
+    sb.append("    control: ").append(toIndentedString(control)).append("\n");
     sb.append("}");
     return sb.toString();
   }

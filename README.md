@@ -58,10 +58,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.*;
-import com.auth.*;
-import com.model.*;
-import com.idcheckio.AdministrationApi;
+import com.ariadnext.idcheckio.*;
+import com.ariadnext.idcheckio.auth.*;
+import com.ariadnext.idcheckio.model.*;
+import com.ariadnext.idcheckio.ws.AdministrationApi;
 
 import java.io.File;
 import java.util.*;
@@ -85,7 +85,7 @@ public class AdministrationApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost/rest*
+All URIs are relative to *https://localhost/rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -104,18 +104,19 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [AnalysisDate](docs/AnalysisDate.md)
- - [CheckReportSummary](docs/CheckReportSummary.md)
+ - [CheckSummaryOfTheSubmittedDocument](docs/CheckSummaryOfTheSubmittedDocument.md)
+ - [ClassificationOfTheSubmittedDocument](docs/ClassificationOfTheSubmittedDocument.md)
  - [Control](docs/Control.md)
  - [ControlGroup](docs/ControlGroup.md)
- - [DocumentDetail](docs/DocumentDetail.md)
+ - [DetailedInformationOfTheHolderOfTheSubmittedDocument](docs/DetailedInformationOfTheHolderOfTheSubmittedDocument.md)
+ - [DetailedInformationOfTheSubmittedDocument](docs/DetailedInformationOfTheSubmittedDocument.md)
  - [ErrorResponse](docs/ErrorResponse.md)
+ - [EventDate](docs/EventDate.md)
  - [ExtractedImage](docs/ExtractedImage.md)
  - [GenericData](docs/GenericData.md)
  - [HealthResponse](docs/HealthResponse.md)
- - [HolderDetail](docs/HolderDetail.md)
- - [IdDocumentClassification](docs/IdDocumentClassification.md)
  - [Image](docs/Image.md)
+ - [ImageIndicator](docs/ImageIndicator.md)
  - [ImageListResponse](docs/ImageListResponse.md)
  - [ImageRequest](docs/ImageRequest.md)
  - [Mrz](docs/Mrz.md)
@@ -130,8 +131,11 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
 Authentication schemes defined for the API:
+### basic
+
+- **Type**: HTTP basic authentication
+
 
 ## Recommendation
 

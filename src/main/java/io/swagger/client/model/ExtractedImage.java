@@ -26,13 +26,196 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.ImageIndicator;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * ExtractedImage
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class ExtractedImage   {
+  /**
+   * Gets or Sets type
+   */
+  public enum TypeEnum {
+    @SerializedName("CROPPED_RECTO")
+    RECTO("CROPPED_RECTO"),
+    
+    @SerializedName("CROPPED_VERSO")
+    VERSO("CROPPED_VERSO"),
+    
+    @SerializedName("CROPPED_FACE")
+    FACE("CROPPED_FACE"),
+    
+    @SerializedName("CROPPED_SIGNATURE")
+    SIGNATURE("CROPPED_SIGNATURE"),
+    
+    @SerializedName("CROPPED_EMITTER_SIGNATURE")
+    EMITTER_SIGNATURE("CROPPED_EMITTER_SIGNATURE");
+
+    private String value;
+
+    TypeEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("type")
+  private TypeEnum type = null;
+
+  @SerializedName("imageDL")
+  private List<byte[]> imageDL = new ArrayList<byte[]>();
+
+  @SerializedName("imageIR")
+  private List<byte[]> imageIR = new ArrayList<byte[]>();
+
+  @SerializedName("imageUV")
+  private List<byte[]> imageUV = new ArrayList<byte[]>();
+
+  @SerializedName("page")
+  private Integer page = null;
+
+  @SerializedName("indicators")
+  private List<ImageIndicator> indicators = new ArrayList<ImageIndicator>();
+
+  public ExtractedImage type(TypeEnum type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public TypeEnum getType() {
+    return type;
+  }
+
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
+
+  public ExtractedImage imageDL(List<byte[]> imageDL) {
+    this.imageDL = imageDL;
+    return this;
+  }
+
+  public ExtractedImage addImageDLItem(byte[] imageDLItem) {
+    this.imageDL.add(imageDLItem);
+    return this;
+  }
+
+   /**
+   * Get imageDL
+   * @return imageDL
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<byte[]> getImageDL() {
+    return imageDL;
+  }
+
+  public void setImageDL(List<byte[]> imageDL) {
+    this.imageDL = imageDL;
+  }
+
+  public ExtractedImage imageIR(List<byte[]> imageIR) {
+    this.imageIR = imageIR;
+    return this;
+  }
+
+  public ExtractedImage addImageIRItem(byte[] imageIRItem) {
+    this.imageIR.add(imageIRItem);
+    return this;
+  }
+
+   /**
+   * Get imageIR
+   * @return imageIR
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<byte[]> getImageIR() {
+    return imageIR;
+  }
+
+  public void setImageIR(List<byte[]> imageIR) {
+    this.imageIR = imageIR;
+  }
+
+  public ExtractedImage imageUV(List<byte[]> imageUV) {
+    this.imageUV = imageUV;
+    return this;
+  }
+
+  public ExtractedImage addImageUVItem(byte[] imageUVItem) {
+    this.imageUV.add(imageUVItem);
+    return this;
+  }
+
+   /**
+   * Get imageUV
+   * @return imageUV
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<byte[]> getImageUV() {
+    return imageUV;
+  }
+
+  public void setImageUV(List<byte[]> imageUV) {
+    this.imageUV = imageUV;
+  }
+
+  public ExtractedImage page(Integer page) {
+    this.page = page;
+    return this;
+  }
+
+   /**
+   * Get page
+   * @return page
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getPage() {
+    return page;
+  }
+
+  public void setPage(Integer page) {
+    this.page = page;
+  }
+
+  public ExtractedImage indicators(List<ImageIndicator> indicators) {
+    this.indicators = indicators;
+    return this;
+  }
+
+  public ExtractedImage addIndicatorsItem(ImageIndicator indicatorsItem) {
+    this.indicators.add(indicatorsItem);
+    return this;
+  }
+
+   /**
+   * Get indicators
+   * @return indicators
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<ImageIndicator> getIndicators() {
+    return indicators;
+  }
+
+  public void setIndicators(List<ImageIndicator> indicators) {
+    this.indicators = indicators;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +225,18 @@ public class ExtractedImage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ExtractedImage extractedImage = (ExtractedImage) o;
+    return Objects.equals(this.type, extractedImage.type) &&
+        Objects.equals(this.imageDL, extractedImage.imageDL) &&
+        Objects.equals(this.imageIR, extractedImage.imageIR) &&
+        Objects.equals(this.imageUV, extractedImage.imageUV) &&
+        Objects.equals(this.page, extractedImage.page) &&
+        Objects.equals(this.indicators, extractedImage.indicators);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(type, imageDL, imageIR, imageUV, page, indicators);
   }
 
   @Override
@@ -55,6 +244,12 @@ public class ExtractedImage   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExtractedImage {\n");
     
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    imageDL: ").append(toIndentedString(imageDL)).append("\n");
+    sb.append("    imageIR: ").append(toIndentedString(imageIR)).append("\n");
+    sb.append("    imageUV: ").append(toIndentedString(imageUV)).append("\n");
+    sb.append("    page: ").append(toIndentedString(page)).append("\n");
+    sb.append("    indicators: ").append(toIndentedString(indicators)).append("\n");
     sb.append("}");
     return sb.toString();
   }

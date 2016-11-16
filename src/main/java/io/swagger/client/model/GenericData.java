@@ -26,13 +26,79 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * GenericData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class GenericData   {
+  @SerializedName("dataKey")
+  private String dataKey = null;
+
+  @SerializedName("dataValue")
+  private String dataValue = null;
+
+  @SerializedName("title")
+  private String title = null;
+
+  public GenericData dataKey(String dataKey) {
+    this.dataKey = dataKey;
+    return this;
+  }
+
+   /**
+   * data key
+   * @return dataKey
+  **/
+  @ApiModelProperty(example = "null", value = "data key")
+  public String getDataKey() {
+    return dataKey;
+  }
+
+  public void setDataKey(String dataKey) {
+    this.dataKey = dataKey;
+  }
+
+  public GenericData dataValue(String dataValue) {
+    this.dataValue = dataValue;
+    return this;
+  }
+
+   /**
+   * data value
+   * @return dataValue
+  **/
+  @ApiModelProperty(example = "null", value = "data value")
+  public String getDataValue() {
+    return dataValue;
+  }
+
+  public void setDataValue(String dataValue) {
+    this.dataValue = dataValue;
+  }
+
+  public GenericData title(String title) {
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * title
+   * @return title
+  **/
+  @ApiModelProperty(example = "null", value = "title")
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +108,15 @@ public class GenericData   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    GenericData genericData = (GenericData) o;
+    return Objects.equals(this.dataKey, genericData.dataKey) &&
+        Objects.equals(this.dataValue, genericData.dataValue) &&
+        Objects.equals(this.title, genericData.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(dataKey, dataValue, title);
   }
 
   @Override
@@ -55,6 +124,9 @@ public class GenericData   {
     StringBuilder sb = new StringBuilder();
     sb.append("class GenericData {\n");
     
+    sb.append("    dataKey: ").append(toIndentedString(dataKey)).append("\n");
+    sb.append("    dataValue: ").append(toIndentedString(dataValue)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");
     return sb.toString();
   }

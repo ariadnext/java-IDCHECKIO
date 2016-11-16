@@ -26,13 +26,79 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * ReportResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class ReportResponse   {
+  @SerializedName("uid")
+  private String uid = null;
+
+  @SerializedName("analysisRefUid")
+  private String analysisRefUid = null;
+
+  @SerializedName("report")
+  private String report = null;
+
+  public ReportResponse uid(String uid) {
+    this.uid = uid;
+    return this;
+  }
+
+   /**
+   * uid
+   * @return uid
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "uid")
+  public String getUid() {
+    return uid;
+  }
+
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
+
+  public ReportResponse analysisRefUid(String analysisRefUid) {
+    this.analysisRefUid = analysisRefUid;
+    return this;
+  }
+
+   /**
+   * analysisRefUid
+   * @return analysisRefUid
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "analysisRefUid")
+  public String getAnalysisRefUid() {
+    return analysisRefUid;
+  }
+
+  public void setAnalysisRefUid(String analysisRefUid) {
+    this.analysisRefUid = analysisRefUid;
+  }
+
+  public ReportResponse report(String report) {
+    this.report = report;
+    return this;
+  }
+
+   /**
+   * Pdf report (base64 encoded)
+   * @return report
+  **/
+  @ApiModelProperty(example = "null", value = "Pdf report (base64 encoded)")
+  public String getReport() {
+    return report;
+  }
+
+  public void setReport(String report) {
+    this.report = report;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +108,15 @@ public class ReportResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ReportResponse reportResponse = (ReportResponse) o;
+    return Objects.equals(this.uid, reportResponse.uid) &&
+        Objects.equals(this.analysisRefUid, reportResponse.analysisRefUid) &&
+        Objects.equals(this.report, reportResponse.report);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(uid, analysisRefUid, report);
   }
 
   @Override
@@ -55,6 +124,9 @@ public class ReportResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportResponse {\n");
     
+    sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
+    sb.append("    analysisRefUid: ").append(toIndentedString(analysisRefUid)).append("\n");
+    sb.append("    report: ").append(toIndentedString(report)).append("\n");
     sb.append("}");
     return sb.toString();
   }

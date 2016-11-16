@@ -26,13 +26,206 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.joda.time.DateTime;
 
 
 /**
  * TaskResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class TaskResponse   {
+  @SerializedName("uid")
+  private String uid = null;
+
+  @SerializedName("isWithProgress")
+  private Boolean isWithProgress = false;
+
+  @SerializedName("accepted")
+  private DateTime accepted = null;
+
+  @SerializedName("started")
+  private DateTime started = null;
+
+  @SerializedName("ended")
+  private DateTime ended = null;
+
+  @SerializedName("lastProgress")
+  private DateTime lastProgress = null;
+
+  @SerializedName("percentage")
+  private Integer percentage = null;
+
+  @SerializedName("redirectUrl")
+  private String redirectUrl = null;
+
+  @SerializedName("message")
+  private String message = null;
+
+  public TaskResponse uid(String uid) {
+    this.uid = uid;
+    return this;
+  }
+
+   /**
+   * analysisRefUid
+   * @return uid
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "analysisRefUid")
+  public String getUid() {
+    return uid;
+  }
+
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
+
+  public TaskResponse isWithProgress(Boolean isWithProgress) {
+    this.isWithProgress = isWithProgress;
+    return this;
+  }
+
+   /**
+   * task with progress
+   * @return isWithProgress
+  **/
+  @ApiModelProperty(example = "null", value = "task with progress")
+  public Boolean getIsWithProgress() {
+    return isWithProgress;
+  }
+
+  public void setIsWithProgress(Boolean isWithProgress) {
+    this.isWithProgress = isWithProgress;
+  }
+
+  public TaskResponse accepted(DateTime accepted) {
+    this.accepted = accepted;
+    return this;
+  }
+
+   /**
+   * task accepted date
+   * @return accepted
+  **/
+  @ApiModelProperty(example = "null", value = "task accepted date")
+  public DateTime getAccepted() {
+    return accepted;
+  }
+
+  public void setAccepted(DateTime accepted) {
+    this.accepted = accepted;
+  }
+
+  public TaskResponse started(DateTime started) {
+    this.started = started;
+    return this;
+  }
+
+   /**
+   * task started date
+   * @return started
+  **/
+  @ApiModelProperty(example = "null", value = "task started date")
+  public DateTime getStarted() {
+    return started;
+  }
+
+  public void setStarted(DateTime started) {
+    this.started = started;
+  }
+
+  public TaskResponse ended(DateTime ended) {
+    this.ended = ended;
+    return this;
+  }
+
+   /**
+   * task ended date
+   * @return ended
+  **/
+  @ApiModelProperty(example = "null", value = "task ended date")
+  public DateTime getEnded() {
+    return ended;
+  }
+
+  public void setEnded(DateTime ended) {
+    this.ended = ended;
+  }
+
+  public TaskResponse lastProgress(DateTime lastProgress) {
+    this.lastProgress = lastProgress;
+    return this;
+  }
+
+   /**
+   * last progress date
+   * @return lastProgress
+  **/
+  @ApiModelProperty(example = "null", value = "last progress date")
+  public DateTime getLastProgress() {
+    return lastProgress;
+  }
+
+  public void setLastProgress(DateTime lastProgress) {
+    this.lastProgress = lastProgress;
+  }
+
+  public TaskResponse percentage(Integer percentage) {
+    this.percentage = percentage;
+    return this;
+  }
+
+   /**
+   * percentage progress
+   * @return percentage
+  **/
+  @ApiModelProperty(example = "null", value = "percentage progress")
+  public Integer getPercentage() {
+    return percentage;
+  }
+
+  public void setPercentage(Integer percentage) {
+    this.percentage = percentage;
+  }
+
+  public TaskResponse redirectUrl(String redirectUrl) {
+    this.redirectUrl = redirectUrl;
+    return this;
+  }
+
+   /**
+   * redirect url
+   * @return redirectUrl
+  **/
+  @ApiModelProperty(example = "null", value = "redirect url")
+  public String getRedirectUrl() {
+    return redirectUrl;
+  }
+
+  public void setRedirectUrl(String redirectUrl) {
+    this.redirectUrl = redirectUrl;
+  }
+
+  public TaskResponse message(String message) {
+    this.message = message;
+    return this;
+  }
+
+   /**
+   * message
+   * @return message
+  **/
+  @ApiModelProperty(example = "null", value = "message")
+  public String getMessage() {
+    return message;
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +235,21 @@ public class TaskResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    TaskResponse taskResponse = (TaskResponse) o;
+    return Objects.equals(this.uid, taskResponse.uid) &&
+        Objects.equals(this.isWithProgress, taskResponse.isWithProgress) &&
+        Objects.equals(this.accepted, taskResponse.accepted) &&
+        Objects.equals(this.started, taskResponse.started) &&
+        Objects.equals(this.ended, taskResponse.ended) &&
+        Objects.equals(this.lastProgress, taskResponse.lastProgress) &&
+        Objects.equals(this.percentage, taskResponse.percentage) &&
+        Objects.equals(this.redirectUrl, taskResponse.redirectUrl) &&
+        Objects.equals(this.message, taskResponse.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(uid, isWithProgress, accepted, started, ended, lastProgress, percentage, redirectUrl, message);
   }
 
   @Override
@@ -55,6 +257,15 @@ public class TaskResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskResponse {\n");
     
+    sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
+    sb.append("    isWithProgress: ").append(toIndentedString(isWithProgress)).append("\n");
+    sb.append("    accepted: ").append(toIndentedString(accepted)).append("\n");
+    sb.append("    started: ").append(toIndentedString(started)).append("\n");
+    sb.append("    ended: ").append(toIndentedString(ended)).append("\n");
+    sb.append("    lastProgress: ").append(toIndentedString(lastProgress)).append("\n");
+    sb.append("    percentage: ").append(toIndentedString(percentage)).append("\n");
+    sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
   }

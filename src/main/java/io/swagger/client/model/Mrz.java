@@ -26,13 +26,79 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * Mrz
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class Mrz   {
+  @SerializedName("line1")
+  private String line1 = null;
+
+  @SerializedName("line2")
+  private String line2 = null;
+
+  @SerializedName("line3")
+  private String line3 = null;
+
+  public Mrz line1(String line1) {
+    this.line1 = line1;
+    return this;
+  }
+
+   /**
+   * line 1 of MRZ
+   * @return line1
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "line 1 of MRZ")
+  public String getLine1() {
+    return line1;
+  }
+
+  public void setLine1(String line1) {
+    this.line1 = line1;
+  }
+
+  public Mrz line2(String line2) {
+    this.line2 = line2;
+    return this;
+  }
+
+   /**
+   * line 2 of MRZ
+   * @return line2
+  **/
+  @ApiModelProperty(example = "null", value = "line 2 of MRZ")
+  public String getLine2() {
+    return line2;
+  }
+
+  public void setLine2(String line2) {
+    this.line2 = line2;
+  }
+
+  public Mrz line3(String line3) {
+    this.line3 = line3;
+    return this;
+  }
+
+   /**
+   * line 3 of MRZ
+   * @return line3
+  **/
+  @ApiModelProperty(example = "null", value = "line 3 of MRZ")
+  public String getLine3() {
+    return line3;
+  }
+
+  public void setLine3(String line3) {
+    this.line3 = line3;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +108,15 @@ public class Mrz   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    Mrz mrz = (Mrz) o;
+    return Objects.equals(this.line1, mrz.line1) &&
+        Objects.equals(this.line2, mrz.line2) &&
+        Objects.equals(this.line3, mrz.line3);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(line1, line2, line3);
   }
 
   @Override
@@ -55,6 +124,9 @@ public class Mrz   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Mrz {\n");
     
+    sb.append("    line1: ").append(toIndentedString(line1)).append("\n");
+    sb.append("    line2: ").append(toIndentedString(line2)).append("\n");
+    sb.append("    line3: ").append(toIndentedString(line3)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -26,13 +26,38 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Mrz;
 
 
 /**
  * MrzResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class MrzResponse   {
+  @SerializedName("mrz")
+  private Mrz mrz = null;
+
+  public MrzResponse mrz(Mrz mrz) {
+    this.mrz = mrz;
+    return this;
+  }
+
+   /**
+   * Get mrz
+   * @return mrz
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Mrz getMrz() {
+    return mrz;
+  }
+
+  public void setMrz(Mrz mrz) {
+    this.mrz = mrz;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +67,13 @@ public class MrzResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    MrzResponse mrzResponse = (MrzResponse) o;
+    return Objects.equals(this.mrz, mrzResponse.mrz);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(mrz);
   }
 
   @Override
@@ -55,6 +81,7 @@ public class MrzResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MrzResponse {\n");
     
+    sb.append("    mrz: ").append(toIndentedString(mrz)).append("\n");
     sb.append("}");
     return sb.toString();
   }

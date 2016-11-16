@@ -21,8 +21,8 @@ GET image
 ### Example
 ```java
 // Import classes:
-//import com.ApiException;
-//import com.idcheckio.SandboxApi;
+//import com.ariadnext.idcheckio.ApiException;
+//import com.ariadnext.idcheckio.ws.SandboxApi;
 
 
 SandboxApi apiInstance = new SandboxApi();
@@ -72,8 +72,8 @@ GET images list
 ### Example
 ```java
 // Import classes:
-//import com.ApiException;
-//import com.idcheckio.SandboxApi;
+//import com.ariadnext.idcheckio.ApiException;
+//import com.ariadnext.idcheckio.ws.SandboxApi;
 
 
 SandboxApi apiInstance = new SandboxApi();
@@ -113,8 +113,8 @@ GET mrz
 ### Example
 ```java
 // Import classes:
-//import com.ApiException;
-//import com.idcheckio.SandboxApi;
+//import com.ariadnext.idcheckio.ApiException;
+//import com.ariadnext.idcheckio.ws.SandboxApi;
 
 
 SandboxApi apiInstance = new SandboxApi();
@@ -158,8 +158,8 @@ GET mrz list
 ### Example
 ```java
 // Import classes:
-//import com.ApiException;
-//import com.idcheckio.SandboxApi;
+//import com.ariadnext.idcheckio.ApiException;
+//import com.ariadnext.idcheckio.ws.SandboxApi;
 
 
 SandboxApi apiInstance = new SandboxApi();

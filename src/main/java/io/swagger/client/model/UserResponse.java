@@ -26,13 +26,37 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * UserResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class UserResponse   {
+  @SerializedName("remainingCredits")
+  private Integer remainingCredits = null;
+
+  public UserResponse remainingCredits(Integer remainingCredits) {
+    this.remainingCredits = remainingCredits;
+    return this;
+  }
+
+   /**
+   * user remaining credit
+   * @return remainingCredits
+  **/
+  @ApiModelProperty(example = "null", value = "user remaining credit")
+  public Integer getRemainingCredits() {
+    return remainingCredits;
+  }
+
+  public void setRemainingCredits(Integer remainingCredits) {
+    this.remainingCredits = remainingCredits;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +66,13 @@ public class UserResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    UserResponse userResponse = (UserResponse) o;
+    return Objects.equals(this.remainingCredits, userResponse.remainingCredits);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(remainingCredits);
   }
 
   @Override
@@ -55,6 +80,7 @@ public class UserResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserResponse {\n");
     
+    sb.append("    remainingCredits: ").append(toIndentedString(remainingCredits)).append("\n");
     sb.append("}");
     return sb.toString();
   }

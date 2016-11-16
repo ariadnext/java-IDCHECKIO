@@ -26,13 +26,37 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * ErrorResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class ErrorResponse   {
+  @SerializedName("errorMessage")
+  private String errorMessage = null;
+
+  public ErrorResponse errorMessage(String errorMessage) {
+    this.errorMessage = errorMessage;
+    return this;
+  }
+
+   /**
+   * error message
+   * @return errorMessage
+  **/
+  @ApiModelProperty(example = "null", value = "error message")
+  public String getErrorMessage() {
+    return errorMessage;
+  }
+
+  public void setErrorMessage(String errorMessage) {
+    this.errorMessage = errorMessage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +66,13 @@ public class ErrorResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ErrorResponse errorResponse = (ErrorResponse) o;
+    return Objects.equals(this.errorMessage, errorResponse.errorMessage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(errorMessage);
   }
 
   @Override
@@ -55,6 +80,7 @@ public class ErrorResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorResponse {\n");
     
+    sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

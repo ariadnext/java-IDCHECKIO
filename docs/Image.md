@@ -4,6 +4,71 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**doc** | [**DocEnum**](#DocEnum) |  |  [optional]
+**face** | [**FaceEnum**](#FaceEnum) |  |  [optional]
+**rawType** | [**RawTypeEnum**](#RawTypeEnum) |  |  [optional]
+**light** | [**LightEnum**](#LightEnum) |  |  [optional]
+
+
+<a name="DocEnum"></a>
+## Enum: DocEnum
+Name | Value
+---- | -----
+CNI_BE_SPECIMEN | &quot;CNI_BE_SPECIMEN&quot;
+CNI_BE_SPECIMEN_MRZ | &quot;CNI_BE_SPECIMEN_MRZ&quot;
+PASSEPORT_FR_SPECIMEN_NATACHA | &quot;PASSEPORT_FR_SPECIMEN_NATACHA&quot;
+PASSEPORT_FR_SPECIMEN_NATACHA_MRZ | &quot;PASSEPORT_FR_SPECIMEN_NATACHA_MRZ&quot;
+CNI_FR_SPECIMEN_BERTHIER | &quot;CNI_FR_SPECIMEN_BERTHIER&quot;
+CNI_FR_SPECIMEN_BERTHIER_MRZ | &quot;CNI_FR_SPECIMEN_BERTHIER_MRZ&quot;
+PASSEPORT_FR_SPECIMEN_GRAUX_MRZ | &quot;PASSEPORT_FR_SPECIMEN_GRAUX_MRZ&quot;
+PASSEPORT_FR_SPECIMEN_GRAUX | &quot;PASSEPORT_FR_SPECIMEN_GRAUX&quot;
+CNI_BIH_SPECIMEN | &quot;CNI_BIH_SPECIMEN&quot;
+CNI_BIH_SPECIMEN_MRZ | &quot;CNI_BIH_SPECIMEN_MRZ&quot;
+PASSEPORT_USA_FALSIFIE_TRAVELER | &quot;PASSEPORT_USA_FALSIFIE_TRAVELER&quot;
+PASSEPORT_USA_FALSIFIE_TRAVELER_MRZ | &quot;PASSEPORT_USA_FALSIFIE_TRAVELER_MRZ&quot;
+RP_FR_SPECIMEN_MARTIN | &quot;RP_FR_SPECIMEN_MARTIN&quot;
+RP_FR_SPECIMEN_MARTIN_MRZ | &quot;RP_FR_SPECIMEN_MARTIN_MRZ&quot;
+CNI_GBR_SPECIMEN_FREEMAN | &quot;CNI_GBR_SPECIMEN_FREEMAN&quot;
+CNI_GBR_SPECIMEN_FREEMAN_MRZ | &quot;CNI_GBR_SPECIMEN_FREEMAN_MRZ&quot;
+PASSEPORT_CHN_SPECIMEN_ZHENGJIAN | &quot;PASSEPORT_CHN_SPECIMEN_ZHENGJIAN&quot;
+PASSEPORT_CHN_SPECIMEN_ZHENGJIAN_MRZ | &quot;PASSEPORT_CHN_SPECIMEN_ZHENGJIAN_MRZ&quot;
+PASSEPORT_ITA_SPECIMEN_ROSSI | &quot;PASSEPORT_ITA_SPECIMEN_ROSSI&quot;
+PASSEPORT_ITA_SPECIMEN_ROSSI_MRZ | &quot;PASSEPORT_ITA_SPECIMEN_ROSSI_MRZ&quot;
+RP_GBR_SPECIMEN_IVANOVA | &quot;RP_GBR_SPECIMEN_IVANOVA&quot;
+RP_GBR_SPECIMEN_IVANOVA_MRZ | &quot;RP_GBR_SPECIMEN_IVANOVA_MRZ&quot;
+DL_FR_SPECIMEN_MARTIN | &quot;DL_FR_SPECIMEN_MARTIN&quot;
+DL_FR_SPECIMEN_MARTIN_MRZ | &quot;DL_FR_SPECIMEN_MARTIN_MRZ&quot;
+ELECTRICITE_FR_BERTHIER | &quot;ELECTRICITE_FR_BERTHIER&quot;
+IMPOSITION_FR_BERTHIER | &quot;IMPOSITION_FR_BERTHIER&quot;
+RIB_FR_BERTHIER | &quot;RIB_FR_BERTHIER&quot;
+TELEPHONE_2DDOC_BERTHIER | &quot;TELEPHONE_2DDOC_BERTHIER&quot;
+CARTE_GRISE_DUPONT | &quot;CARTE_GRISE_DUPONT&quot;
+SALAIRE_FR_BERTHIER | &quot;SALAIRE_FR_BERTHIER&quot;
+
+
+<a name="FaceEnum"></a>
+## Enum: FaceEnum
+Name | Value
+---- | -----
+RECTO | &quot;RECTO&quot;
+VERSO | &quot;VERSO&quot;
+
+
+<a name="RawTypeEnum"></a>
+## Enum: RawTypeEnum
+Name | Value
+---- | -----
+BASE64 | &quot;BASE64&quot;
+JPG | &quot;JPG&quot;
+
+
+<a name="LightEnum"></a>
+## Enum: LightEnum
+Name | Value
+---- | -----
+DL | &quot;DL&quot;
+IR | &quot;IR&quot;
+UV | &quot;UV&quot;
 
 
 

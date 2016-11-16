@@ -26,13 +26,128 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * Control
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class Control   {
+  @SerializedName("identifier")
+  private String identifier = null;
+
+  @SerializedName("titleMsg")
+  private String titleMsg = null;
+
+  @SerializedName("resultMsg")
+  private String resultMsg = null;
+
+  /**
+   * result
+   */
+  public enum ResultEnum {
+    @SerializedName("NONE")
+    NONE("NONE"),
+    
+    @SerializedName("OK")
+    OK("OK"),
+    
+    @SerializedName("WARNING")
+    WARNING("WARNING"),
+    
+    @SerializedName("ERROR")
+    ERROR("ERROR");
+
+    private String value;
+
+    ResultEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("result")
+  private ResultEnum result = null;
+
+  public Control identifier(String identifier) {
+    this.identifier = identifier;
+    return this;
+  }
+
+   /**
+   * control identifier
+   * @return identifier
+  **/
+  @ApiModelProperty(example = "null", value = "control identifier")
+  public String getIdentifier() {
+    return identifier;
+  }
+
+  public void setIdentifier(String identifier) {
+    this.identifier = identifier;
+  }
+
+  public Control titleMsg(String titleMsg) {
+    this.titleMsg = titleMsg;
+    return this;
+  }
+
+   /**
+   * title message
+   * @return titleMsg
+  **/
+  @ApiModelProperty(example = "null", value = "title message")
+  public String getTitleMsg() {
+    return titleMsg;
+  }
+
+  public void setTitleMsg(String titleMsg) {
+    this.titleMsg = titleMsg;
+  }
+
+  public Control resultMsg(String resultMsg) {
+    this.resultMsg = resultMsg;
+    return this;
+  }
+
+   /**
+   * result message
+   * @return resultMsg
+  **/
+  @ApiModelProperty(example = "null", value = "result message")
+  public String getResultMsg() {
+    return resultMsg;
+  }
+
+  public void setResultMsg(String resultMsg) {
+    this.resultMsg = resultMsg;
+  }
+
+  public Control result(ResultEnum result) {
+    this.result = result;
+    return this;
+  }
+
+   /**
+   * result
+   * @return result
+  **/
+  @ApiModelProperty(example = "null", value = "result")
+  public ResultEnum getResult() {
+    return result;
+  }
+
+  public void setResult(ResultEnum result) {
+    this.result = result;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +157,16 @@ public class Control   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    Control control = (Control) o;
+    return Objects.equals(this.identifier, control.identifier) &&
+        Objects.equals(this.titleMsg, control.titleMsg) &&
+        Objects.equals(this.resultMsg, control.resultMsg) &&
+        Objects.equals(this.result, control.result);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(identifier, titleMsg, resultMsg, result);
   }
 
   @Override
@@ -55,6 +174,10 @@ public class Control   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Control {\n");
     
+    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+    sb.append("    titleMsg: ").append(toIndentedString(titleMsg)).append("\n");
+    sb.append("    resultMsg: ").append(toIndentedString(resultMsg)).append("\n");
+    sb.append("    result: ").append(toIndentedString(result)).append("\n");
     sb.append("}");
     return sb.toString();
   }

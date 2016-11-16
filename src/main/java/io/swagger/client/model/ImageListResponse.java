@@ -26,13 +26,45 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Image;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * ImageListResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class ImageListResponse   {
+  @SerializedName("images")
+  private List<Image> images = new ArrayList<Image>();
+
+  public ImageListResponse images(List<Image> images) {
+    this.images = images;
+    return this;
+  }
+
+  public ImageListResponse addImagesItem(Image imagesItem) {
+    this.images.add(imagesItem);
+    return this;
+  }
+
+   /**
+   * get images list object
+   * @return images
+  **/
+  @ApiModelProperty(example = "null", value = "get images list object")
+  public List<Image> getImages() {
+    return images;
+  }
+
+  public void setImages(List<Image> images) {
+    this.images = images;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +74,13 @@ public class ImageListResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ImageListResponse imageListResponse = (ImageListResponse) o;
+    return Objects.equals(this.images, imageListResponse.images);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(images);
   }
 
   @Override
@@ -55,6 +88,7 @@ public class ImageListResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImageListResponse {\n");
     
+    sb.append("    images: ").append(toIndentedString(images)).append("\n");
     sb.append("}");
     return sb.toString();
   }

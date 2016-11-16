@@ -26,13 +26,44 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * MrzListResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class MrzListResponse   {
+  @SerializedName("mrz")
+  private List<String> mrz = new ArrayList<String>();
+
+  public MrzListResponse mrz(List<String> mrz) {
+    this.mrz = mrz;
+    return this;
+  }
+
+  public MrzListResponse addMrzItem(String mrzItem) {
+    this.mrz.add(mrzItem);
+    return this;
+  }
+
+   /**
+   * get mrz list object
+   * @return mrz
+  **/
+  @ApiModelProperty(example = "null", value = "get mrz list object")
+  public List<String> getMrz() {
+    return mrz;
+  }
+
+  public void setMrz(List<String> mrz) {
+    this.mrz = mrz;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +73,13 @@ public class MrzListResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    MrzListResponse mrzListResponse = (MrzListResponse) o;
+    return Objects.equals(this.mrz, mrzListResponse.mrz);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(mrz);
   }
 
   @Override
@@ -55,6 +87,7 @@ public class MrzListResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MrzListResponse {\n");
     
+    sb.append("    mrz: ").append(toIndentedString(mrz)).append("\n");
     sb.append("}");
     return sb.toString();
   }

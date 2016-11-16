@@ -26,13 +26,62 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * HealthResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-18T16:22:12.150+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T10:49:19.639+01:00")
 public class HealthResponse   {
+  /**
+   * Gets or Sets status
+   */
+  public enum StatusEnum {
+    @SerializedName("OK")
+    OK("OK"),
+    
+    @SerializedName("WARN")
+    WARN("WARN"),
+    
+    @SerializedName("ERROR")
+    ERROR("ERROR");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("status")
+  private StatusEnum status = null;
+
+  public HealthResponse status(StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public StatusEnum getStatus() {
+    return status;
+  }
+
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +91,13 @@ public class HealthResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    HealthResponse healthResponse = (HealthResponse) o;
+    return Objects.equals(this.status, healthResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(status);
   }
 
   @Override
@@ -55,6 +105,7 @@ public class HealthResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class HealthResponse {\n");
     
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }
