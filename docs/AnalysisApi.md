@@ -22,11 +22,11 @@ Get a pdf report (base64 encoded) (demo)
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AnalysisApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AnalysisApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,11 +78,11 @@ Get result controls
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AnalysisApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AnalysisApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -140,11 +140,11 @@ Get task status
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AnalysisApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AnalysisApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -198,11 +198,11 @@ POST an image check task
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AnalysisApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AnalysisApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -256,11 +256,11 @@ POST a mrz check task
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AnalysisApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AnalysisApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

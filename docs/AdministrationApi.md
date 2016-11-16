@@ -19,8 +19,8 @@ GET server health (OK 200)
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.ws.AdministrationApi;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.api.AdministrationApi;
 
 
 AdministrationApi apiInstance = new AdministrationApi();
@@ -60,11 +60,11 @@ Get user informations
 ### Example
 ```java
 // Import classes:
-//import com.ariadnext.idcheckio.ApiClient;
-//import com.ariadnext.idcheckio.ApiException;
-//import com.ariadnext.idcheckio.Configuration;
-//import com.ariadnext.idcheckio.auth.*;
-//import com.ariadnext.idcheckio.ws.AdministrationApi;
+//import com.ariadnext.idcheckio.invoker.ApiClient;
+//import com.ariadnext.idcheckio.invoker.ApiException;
+//import com.ariadnext.idcheckio.invoker.Configuration;
+//import com.ariadnext.idcheckio.invoker.auth.*;
+//import com.ariadnext.idcheckio.api.AdministrationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
