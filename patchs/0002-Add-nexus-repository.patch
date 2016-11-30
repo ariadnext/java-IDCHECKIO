@@ -1,0 +1,45 @@
+From 4bf0611a2a0c32c9d52bd62d2dd75a12957cfeb9 Mon Sep 17 00:00:00 2001
+From: Denis Jagoudel <denis.jagoudel@ariadnext.com>
+Date: Wed, 30 Nov 2016 19:04:18 +0100
+Subject: [PATCH] Add nexus repository
+
+---
+ README.md | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/README.md b/README.md
+index 0f60806..61e8963 100644
+--- a/README.md
++++ b/README.md
+@@ -4,6 +4,12 @@
+ 
+ Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+ 
++You have to add this Nexus url on your project :
++
++```groovy
++https://repoman.rennes.ariadnext.com/content/repositories/com.ariadnext.idcheckio
++```
++
+ ## Installation
+ 
+ To install the API client library to your local Maven repository, simply execute:
+@@ -69,7 +75,7 @@ import java.util.*;
+ public class AdministrationApiExample {
+ 
+     public static void main(String[] args) {
+-        
++
+         AdministrationApi apiInstance = new AdministrationApi();
+         try {
+             HealthResponse result = apiInstance.getHealth();
+@@ -142,6 +148,3 @@ Authentication schemes defined for the API:
+ It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
+ 
+ ## Author
+-
+-
+-
+-- 
+2.9.3 (Apple Git-75)
+
