@@ -4,6 +4,12 @@
 
 Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
 
+You have to add this Nexus url on your project :
+
+```groovy
+https://repoman.rennes.ariadnext.com/content/repositories/com.ariadnext.idcheckio
+```
+
 ## Installation
 
 To install the API client library to your local Maven repository, simply execute:
@@ -69,7 +75,7 @@ import java.util.*;
 public class AdministrationApiExample {
 
     public static void main(String[] args) {
-        
+
         AdministrationApi apiInstance = new AdministrationApi();
         try {
             HealthResponse result = apiInstance.getHealth();
@@ -142,6 +148,3 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
 
 ## Author
-
-
-
