@@ -34,7 +34,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ReportResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-30T17:02:39.103+01:00")
+
 public class ReportResponse   {
   @SerializedName("uid")
   private String uid = null;

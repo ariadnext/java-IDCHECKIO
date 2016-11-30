@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * MrzListResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-30T17:02:39.103+01:00")
+
 public class MrzListResponse   {
   @SerializedName("mrz")
   private List<String> mrz = new ArrayList<String>();

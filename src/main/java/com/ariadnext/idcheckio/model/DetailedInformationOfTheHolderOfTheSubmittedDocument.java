@@ -38,7 +38,7 @@ import java.util.List;
 /**
  * DetailedInformationOfTheHolderOfTheSubmittedDocument
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-30T17:02:39.103+01:00")
+
 public class DetailedInformationOfTheHolderOfTheSubmittedDocument   {
   @SerializedName("lastName")
   private List<String> lastName = new ArrayList<String>();

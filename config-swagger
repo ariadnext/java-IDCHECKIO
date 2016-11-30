@@ -8,5 +8,6 @@
 "gitRepoId":"php-IDCHECKIO",
 "gitUserId":"ariadnext",
 "library":"okhttp-gson",
-"sourceFolder":"src/main/java"
+"sourceFolder":"src/main/java",
+"hideGenerationTimestamp":true
 }
