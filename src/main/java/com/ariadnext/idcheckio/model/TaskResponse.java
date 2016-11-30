@@ -29,13 +29,12 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
 
 
 /**
  * TaskResponse
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-16T12:14:28.841+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-30T17:02:39.103+01:00")
 public class TaskResponse   {
   @SerializedName("uid")
   private String uid = null;
@@ -44,16 +43,16 @@ public class TaskResponse   {
   private Boolean isWithProgress = false;
 
   @SerializedName("accepted")
-  private DateTime accepted = null;
+  private Long accepted = null;
 
   @SerializedName("started")
-  private DateTime started = null;
+  private Long started = null;
 
   @SerializedName("ended")
-  private DateTime ended = null;
+  private Long ended = null;
 
   @SerializedName("lastProgress")
-  private DateTime lastProgress = null;
+  private Long lastProgress = null;
 
   @SerializedName("percentage")
   private Integer percentage = null;
@@ -100,7 +99,7 @@ public class TaskResponse   {
     this.isWithProgress = isWithProgress;
   }
 
-  public TaskResponse accepted(DateTime accepted) {
+  public TaskResponse accepted(Long accepted) {
     this.accepted = accepted;
     return this;
   }
@@ -110,15 +109,15 @@ public class TaskResponse   {
    * @return accepted
   **/
   @ApiModelProperty(example = "null", value = "task accepted date")
-  public DateTime getAccepted() {
+  public Long getAccepted() {
     return accepted;
   }
 
-  public void setAccepted(DateTime accepted) {
+  public void setAccepted(Long accepted) {
     this.accepted = accepted;
   }
 
-  public TaskResponse started(DateTime started) {
+  public TaskResponse started(Long started) {
     this.started = started;
     return this;
   }
@@ -128,15 +127,15 @@ public class TaskResponse   {
    * @return started
   **/
   @ApiModelProperty(example = "null", value = "task started date")
-  public DateTime getStarted() {
+  public Long getStarted() {
     return started;
   }
 
-  public void setStarted(DateTime started) {
+  public void setStarted(Long started) {
     this.started = started;
   }
 
-  public TaskResponse ended(DateTime ended) {
+  public TaskResponse ended(Long ended) {
     this.ended = ended;
     return this;
   }
@@ -146,15 +145,15 @@ public class TaskResponse   {
    * @return ended
   **/
   @ApiModelProperty(example = "null", value = "task ended date")
-  public DateTime getEnded() {
+  public Long getEnded() {
     return ended;
   }
 
-  public void setEnded(DateTime ended) {
+  public void setEnded(Long ended) {
     this.ended = ended;
   }
 
-  public TaskResponse lastProgress(DateTime lastProgress) {
+  public TaskResponse lastProgress(Long lastProgress) {
     this.lastProgress = lastProgress;
     return this;
   }
@@ -164,11 +163,11 @@ public class TaskResponse   {
    * @return lastProgress
   **/
   @ApiModelProperty(example = "null", value = "last progress date")
-  public DateTime getLastProgress() {
+  public Long getLastProgress() {
     return lastProgress;
   }
 
-  public void setLastProgress(DateTime lastProgress) {
+  public void setLastProgress(Long lastProgress) {
     this.lastProgress = lastProgress;
   }
 

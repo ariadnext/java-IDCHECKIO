@@ -1,0 +1,12 @@
+{
+"apiPackage":"com.ariadnext.idcheckio.api",
+"invokerPackage":"com.ariadnext.idcheckio.invoker",
+"modelPackage":"com.ariadnext.idcheckio.model",
+"groupId":"com.ariadnext.idcheckio",
+"artifactId":"idcheckio-java-client",
+"artifactVersion":"1.0.0",
+"gitRepoId":"php-IDCHECKIO",
+"gitUserId":"ariadnext",
+"library":"okhttp-gson",
+"sourceFolder":"src/main/java"
+}
