@@ -17,9 +17,6 @@ public class GetResult {
         apiClient.setBasePath(basePath);
         apiClient.setUsername(login);
         apiClient.setPassword(password);
-        apiClient.setConnectTimeout(30000);
-        apiClient.setReadTimeout(30000);
-        apiClient.setFollowRedirects(false);
         analysisApi = new AnalysisApi(apiClient);
     }
 

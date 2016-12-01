@@ -26,7 +26,7 @@ public class GetUser {
       System.out.println("ERROR: Server returns code = " + ae.getCode());
     }
     if (userResponse != null) {
-      System.out.println("Remaining credits = "userResponse.getRemainingCredits());
+      System.out.println("Remaining credits = " + userResponse.getRemainingCredits());
     }
   }
 }
