@@ -1,0 +1,52 @@
+From acc51946c4ab2075294c4b5e1eb4536a54678cb1 Mon Sep 17 00:00:00 2001
+From: Denis Jagoudel <denis.jagoudel@ariadnext.com>
+Date: Tue, 6 Dec 2016 18:24:55 +0100
+Subject: [PATCH] Update README
+
+---
+ README.md      | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+diff --git a/README.md b/README.md
+index 61e8963..32e6ce4 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,13 @@
+ # idcheckio-java-client
+ 
++![image](https://www.idcheck.io/content/uploads/sites/2/2015/12/tick_mark.png)
++
++Web application : <https://idcheck.io>
++
++Mashape REST API : <https://market.mashape.com/ariadnext/idcheck-io-api>
++
++Swagger REST API : <https://api.idcheck.io/swagger/#/>
++
+ ## Requirements
+ 
+ Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+@@ -10,6 +18,21 @@ You have to add this Nexus url on your project :
+ https://repoman.rennes.ariadnext.com/content/repositories/com.ariadnext.idcheckio
+ ```
+ 
++**Credentials**
++
++To get your credentials, contact us by email with your all needs at: contact@idcheck.io
++You will receive two sets of credentials: one for test purpose only and on for production.
++
++**Platforms**
++
++Three platforms can be targeted with the library:
++
++| Platform   |      API URL                     | Credentials | Purpose                                  | Restriction                            | Cost                 |
++-------------|----------------------------------|-------------|------------------------------------------|----------------------------------------|----------------------|
++| SANDBOX    | https://sandbox.idcheck.io/rest  | Test        | Dev integration + automated tests        | Only a fix set of images are supported | Free
++| TEST       | https://api-test.idcheck.io/rest | Test        | Functional tests / Idcheck.io evaluation | No SLA                                 | Commercial agreement
++| PROD       | https://api.idcheck.io/rest      | Prod        | Production service                       | None                                   | Commercial agreement
++
+ ## Installation
+ 
+ To install the API client library to your local Maven repository, simply execute:
+-- 
+2.9.3 (Apple Git-75)
+
