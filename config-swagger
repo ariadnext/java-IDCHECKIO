@@ -5,8 +5,6 @@
 "groupId":"com.ariadnext.idcheckio",
 "artifactId":"idcheckio-java-client",
 "artifactVersion":"1.0.0",
-"gitRepoId":"php-IDCHECKIO",
-"gitUserId":"ariadnext",
 "library":"okhttp-gson",
 "sourceFolder":"src/main/java",
 "hideGenerationTimestamp":true

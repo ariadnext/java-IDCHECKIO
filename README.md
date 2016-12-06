@@ -1,5 +1,13 @@
 # idcheckio-java-client
 
+![image](https://www.idcheck.io/content/uploads/sites/2/2015/12/tick_mark.png)
+
+Web application : <https://idcheck.io>
+
+Mashape REST API : <https://market.mashape.com/ariadnext/idcheck-io-api>
+
+Swagger REST API : <https://api.idcheck.io/swagger/#/>
+
 ## Requirements
 
 Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
@@ -9,6 +17,21 @@ You have to add this Nexus url on your project :
 ```groovy
 https://repoman.rennes.ariadnext.com/content/repositories/com.ariadnext.idcheckio
 ```
+
+**Credentials**
+
+To get your credentials, contact us by email with your all needs at: contact@idcheck.io
+You will receive two sets of credentials: one for test purpose only and on for production.
+
+**Platforms**
+
+Three platforms can be targeted with the library:
+
+| Platform   |      API URL                     | Credentials | Purpose                                  | Restriction                            | Cost                 |
+-------------|----------------------------------|-------------|------------------------------------------|----------------------------------------|----------------------|
+| SANDBOX    | https://sandbox.idcheck.io/rest  | Test        | Dev integration + automated tests        | Only a fix set of images are supported | Free
+| TEST       | https://api-test.idcheck.io/rest | Test        | Functional tests / Idcheck.io evaluation | No SLA                                 | Commercial agreement
+| PROD       | https://api.idcheck.io/rest      | Prod        | Production service                       | None                                   | Commercial agreement
 
 ## Installation
 
